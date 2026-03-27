@@ -3,27 +3,27 @@
 # Python 3.8+
 
 # ── Core ML ──
-ultralytics        # YOLOv8 + ByteTrack
-torch
-torchvision
+ultralytics==8.2.0        # YOLOv8 + ByteTrack
+torch>=2.0.0
+torchvision>=0.15.0
 
 # ── Computer Vision ──
-opencv-python
+opencv-python>=4.8.0
 
 # ── Tracking ──
-lap             # Linear Assignment Problem (ByteTrack)
-filterpy           # Kalman filter
+lap>=0.4.0                # Linear Assignment Problem (ByteTrack)
+filterpy>=1.4.5           # Kalman filter
 
 # ── Data ──
-numpy
-scipy
+numpy>=1.24.0
+scipy>=1.10.0
 
 # ── Visualization ──
-matplotlib
+matplotlib>=3.7.0
 
 # ── Video Download ──
-yt-dlp
+yt-dlp>=2024.1.0
 
 # ── Notebook ──
-jupyter
-ipython
+jupyter>=1.0.0
+ipython>=8.0.0
