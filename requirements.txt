@@ -1,0 +1,29 @@
+# Near-Miss Incident Detection System
+# Compatible with Google Colab free tier (CPU only)
+# Python 3.8+
+
+# ── Core ML ──
+ultralytics        # YOLOv8 + ByteTrack
+torch
+torchvision
+
+# ── Computer Vision ──
+opencv-python
+
+# ── Tracking ──
+lap             # Linear Assignment Problem (ByteTrack)
+filterpy           # Kalman filter
+
+# ── Data ──
+numpy
+scipy
+
+# ── Visualization ──
+matplotlib
+
+# ── Video Download ──
+yt-dlp
+
+# ── Notebook ──
+jupyter
+ipython
