@@ -1,29 +1,35 @@
-# Near-Miss Incident Detection System
-# Compatible with Google Colab free tier (CPU only)
-# Python 3.8+
+# ───────────── Core ML ─────────────
+ultralytics==8.2.0
+torch==2.5.1
+torchvision==0.20.1
+torchaudio==2.11.0
 
-# ── Core ML ──
-ultralytics==8.2.0        # YOLOv8 + ByteTrack
-torch>=2.0.0
-torchvision>=0.15.0
+# ───────────── Computer Vision ─────────────
+opencv-python==4.13.0.92
+pillow==12.1.1
 
-# ── Computer Vision ──
-opencv-python>=4.8.0
+# ───────────── Tracking ─────────────
+lap==0.5.13
+filterpy==1.4.5
 
-# ── Tracking ──
-lap>=0.4.0                # Linear Assignment Problem (ByteTrack)
-filterpy>=1.4.5           # Kalman filter
+# ───────────── Data ─────────────
+numpy==2.4.3
+scipy==1.17.1
+pandas==3.0.1
 
-# ── Data ──
-numpy>=1.24.0
-scipy>=1.10.0
+# ───────────── Visualization ─────────────
+matplotlib==3.10.8
 
-# ── Visualization ──
-matplotlib>=3.7.0
+# ───────────── Utilities ─────────────
+tqdm==4.67.3
+PyYAML==6.0.3
+requests==2.33.0
 
-# ── Video Download ──
-yt-dlp>=2024.1.0
+# ───────────── Video ─────────────
+yt-dlp==2026.3.17
 
-# ── Notebook ──
-jupyter>=1.0.0
-ipython>=8.0.0
+# ───────────── Notebook ─────────────
+ipython==9.10.1
+ipykernel==7.2.0
+jupyterlab==4.5.6
+notebook==7.5.5
