@@ -1,0 +1,123 @@
+{
+  "video_info": {
+    "width": 1280,
+    "height": 720,
+    "fps": 20.0,
+    "total_frames": 460,
+    "duration_sec": 23.0,
+    "duration_str": "0:00:23"
+  },
+  "tracking_stats": {
+    "total_frames": 458,
+    "total_detections": 542,
+    "unique_tracks": 12,
+    "class_counts": {
+      "Car": 441,
+      "Bus": 72,
+      "Pedestrian": 16,
+      "Truck": 13
+    },
+    "avg_objects_per_frame": 1.1834061135371179,
+    "max_objects_per_frame": 3,
+    "avg_track_length": 37.666666666666664,
+    "median_track_length": 15.0,
+    "longest_track": 261,
+    "avg_confidence": 0.6249342262195046,
+    "objects_per_frame_std": 0.8366520493405137
+  },
+  "summary": {
+    "total_incidents": 6,
+    "high_risk": 3,
+    "medium_risk": 3,
+    "low_risk": 0
+  },
+  "incidents": [
+    {
+      "id": 0,
+      "start_time": 8.0,
+      "end_time": 8.95,
+      "duration_sec": 0.9499999999999993,
+      "risk_level": "HIGH",
+      "risk_score": 0.4,
+      "min_distance_px": 0.0,
+      "min_ttc_sec": null,
+      "involved_classes": [
+        "Bus",
+        "Car"
+      ],
+      "peak_frame": 160
+    },
+    {
+      "id": 1,
+      "start_time": 11.1,
+      "end_time": 12.35,
+      "duration_sec": 1.25,
+      "risk_level": "MEDIUM",
+      "risk_score": 0.5577811002731323,
+      "min_distance_px": 69.350830078125,
+      "min_ttc_sec": 1.5175861120224,
+      "involved_classes": [
+        "Bus",
+        "Car"
+      ],
+      "peak_frame": 241
+    },
+    {
+      "id": 2,
+      "start_time": 11.35,
+      "end_time": 12.75,
+      "duration_sec": 1.4000000000000004,
+      "risk_level": "HIGH",
+      "risk_score": 0.3505189120769501,
+      "min_distance_px": 24.74053955078125,
+      "min_ttc_sec": null,
+      "involved_classes": [
+        "Car"
+      ],
+      "peak_frame": 227
+    },
+    {
+      "id": 3,
+      "start_time": 11.35,
+      "end_time": 12.35,
+      "duration_sec": 1.0,
+      "risk_level": "HIGH",
+      "risk_score": 0.3668685853481293,
+      "min_distance_px": 16.565715789794922,
+      "min_ttc_sec": null,
+      "involved_classes": [
+        "Bus",
+        "Car"
+      ],
+      "peak_frame": 228
+    },
+    {
+      "id": 4,
+      "start_time": 13.65,
+      "end_time": 14.25,
+      "duration_sec": 0.5999999999999996,
+      "risk_level": "MEDIUM",
+      "risk_score": 0.24748802185058594,
+      "min_distance_px": 76.2559814453125,
+      "min_ttc_sec": null,
+      "involved_classes": [
+        "Car"
+      ],
+      "peak_frame": 273
+    },
+    {
+      "id": 5,
+      "start_time": 13.65,
+      "end_time": 13.9,
+      "duration_sec": 0.25,
+      "risk_level": "MEDIUM",
+      "risk_score": 0.41486573219299316,
+      "min_distance_px": 252.47901916503906,
+      "min_ttc_sec": 0.9256715774536133,
+      "involved_classes": [
+        "Car"
+      ],
+      "peak_frame": 273
+    }
+  ]
+}
