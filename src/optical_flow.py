@@ -32,7 +32,6 @@ class OpticalFlowAnalyzer:
         self.cfg = cfg
         self.flow_cfg = cfg.optical_flow
         
-        # Flow storage
         self.flow_maps: Dict[int, np.ndarray] = {}      # frame_idx -> flow
         self.scene_flow_stats: List[dict] = []           # Per-frame scene stats
         self.object_flow_speeds: Dict[int, List[float]] = defaultdict(list)
