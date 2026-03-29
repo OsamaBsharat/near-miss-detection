@@ -93,7 +93,7 @@ class NearMissDetector:
         # 1. Distance check (fast rejection)
         distance = compute_bbox_distance(obj1.bbox, obj2.bbox)
         if distance > self.nm_cfg.distance_low * 1.5:
-            return None  # Too far, skip
+            return None  
         
         # 2. Closing speed & TTC via Kalman
         closing_speed, collision_point = self.traj.compute_closing_speed(
