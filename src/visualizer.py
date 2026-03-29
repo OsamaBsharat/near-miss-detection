@@ -52,7 +52,18 @@ class VideoAnnotator:
         total = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
         
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+
+        # Make output path absolute and ensure folder exists
+        output_path = os.path.abspath(output_path)
+        output_dir = os.path.dirname(output_path)
+        if output_dir:
+            os.makedirs(output_dir, exist_ok=True)
+
         out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
+
+        if not out.isOpened():
+            cap.release()
+            raise RuntimeError(f'Failed to open VideoWriter for output: {output_path}')
         
         incident_set = set()
         
@@ -96,7 +107,10 @@ class VideoAnnotator:
         
         cap.release()
         out.release()
-        
+
+        if not os.path.exists(output_path):
+            raise FileNotFoundError(f'Annotated video was not created: {output_path}')
+
         size_mb = os.path.getsize(output_path) / (1024 * 1024)
         print(f'  Saved: {output_path} ({size_mb:.1f} MB)')
         return output_path
