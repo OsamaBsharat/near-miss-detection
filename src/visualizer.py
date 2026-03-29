@@ -24,7 +24,6 @@ from .tracker import TrajectoryAnalyzer
 
 
 class VideoAnnotator:
-    """Annotates video with detection, tracking, and near-miss overlays."""
     
     def __init__(self, cfg: PipelineConfig):
         self.cfg = cfg
@@ -278,6 +277,7 @@ class DashboardGenerator:
         self._plot_class_involvement(fig, gs[1, 2], incidents)
         self._plot_risk_timeline(fig, gs[2, :], raw_events, video_info)
         
+        os.makedirs(os.path.dirname(save_path), exist_ok=True)
         plt.savefig(save_path, dpi=150, bbox_inches='tight', facecolor='white')
         plt.close()
         print(f'  Dashboard saved: {save_path}')
