@@ -15,6 +15,8 @@ import numpy as np
 from typing import List
 from collections import defaultdict
 
+from ultralytics import cfg
+
 from .config import PipelineConfig
 from .utils import NearMissEvent, Incident
 
@@ -47,11 +49,11 @@ def generate_html_report(
     for inc in incidents:
         risk_counts[inc.max_risk_level] += 1
     
-    dashboard_b64 = _img_b64('outputs/dashboard.png')
-    peaks_b64 = _img_b64('outputs/peak_moments.png')
-    samples_b64 = _img_b64('outputs/sample_frames.png')
-    flow_b64 = _img_b64('outputs/flow_dashboard.png')
-    class_b64 = _img_b64('outputs/class_pair_analysis.png')
+    dashboard_b64 = _img_b64(os.path.join(cfg.output_dir, 'dashboard.png'))
+    peaks_b64 = _img_b64(os.path.join(cfg.output_dir, 'peak_moments.png'))
+    samples_b64 = _img_b64(os.path.join(cfg.output_dir, 'sample_frames.png'))
+    flow_b64 = _img_b64(os.path.join(cfg.output_dir, 'flow_dashboard.png'))
+    class_b64 = _img_b64(os.path.join(cfg.output_dir, 'class_pair_analysis.png'))
     
     # Incident table rows
     incident_rows = ''
