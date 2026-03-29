@@ -6,8 +6,10 @@ All values are documented with rationale for selection.
 """
 
 from dataclasses import dataclass, field
+import os
 from typing import Dict, List, Tuple
 import numpy as np
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 
 @dataclass
@@ -16,7 +18,7 @@ class DetectionConfig:
     
     # YOLOv8 Nano: 3.2M params, optimal CPU speed/accuracy tradeoff
     # Benchmarked: ~30ms/frame on CPU vs ~60ms for YOLOv8s
-    model_name: str = 'model/yolov8n.pt'
+    model_name: str = os.path.join(BASE_DIR, 'model', 'yolov8n.pt')
     
     # Confidence threshold: 0.35 balances precision/recall
     # Lower = more detections but more false positives
@@ -186,8 +188,9 @@ class PipelineConfig:
     
     # Video settings
     video_url: str = 'https://www.youtube.com/watch?v=r86kxxU-LUY'
-    video_path: str = 'inputs/traffic_video.mp4'
-    output_video: str = 'outputs/annotated_near_miss.mp4'
+    video_path: str = os.path.join(BASE_DIR, 'inputs', 'traffic_video.mp4')
+    output_dir: str = os.path.join(BASE_DIR, 'outputs')
+    output_video: str = os.path.join(BASE_DIR, 'outputs', 'annotated_near_miss.mp4')
     
     # Sub-configurations
     detection: DetectionConfig = field(default_factory=DetectionConfig)
