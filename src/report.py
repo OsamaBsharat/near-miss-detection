@@ -47,7 +47,6 @@ def generate_html_report(
     for inc in incidents:
         risk_counts[inc.max_risk_level] += 1
     
-    # Embed images
     dashboard_b64 = _img_b64('outputs/dashboard.png')
     peaks_b64 = _img_b64('outputs/peak_moments.png')
     samples_b64 = _img_b64('outputs/sample_frames.png')
